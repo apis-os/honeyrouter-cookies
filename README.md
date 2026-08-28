@@ -1,19 +1,11 @@
 # HoneyRouter Cookies
 
-Browser extension that syncs cookies and localStorage into [HoneyRouter / OmniRoute](https://github.com/apis-os/ApisOsHoneyRouter).
+Chrome extension that auto-syncs DeepSeek Web (`chat.deepseek.com` `userToken`) into HoneyRouter / OmniRoute.
 
-**MIT** rebrand of [jackluson/sync-your-cookie](https://github.com/jackluson/sync-your-cookie).
+## Download
 
-> Full source lives in the HoneyRouter monorepo: `extensions/honeyrouter-cookies` on branch `cursor/full-parity-api-ae71` (CI bot cannot push large trees to this empty repo yet).
+**https://omniroute.apisos.dev/extensions/honeyrouter-cookies-dist.zip**
 
-## DeepSeek Web auto-push
+See [DOWNLOAD.md](./DOWNLOAD.md) for Load-unpacked steps.
 
-1. Build: `pnpm install && pnpm build`
-2. Chrome → Load unpacked → `dist/`
-3. Options → HoneyRouter URL `https://omniroute.apisos.dev` + manage-scope admin token
-4. Sign in at https://chat.deepseek.com — extension pushes `userToken` to `POST /api/providers/bulk-web-session`
-
-## Limitations
-
-- You must log in in your real browser (Kitesurf/WAF cannot steal sessions).
-- Gateway may still stub `deepseek-web` chat until the executor is unstubbed — credential import still works.
+Source also lives in [ApisOsHoneyRouter](https://github.com/apis-os/ApisOsHoneyRouter) under `extensions/honeyrouter-cookies`.
